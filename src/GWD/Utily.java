@@ -1,5 +1,6 @@
 package GWD;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -35,13 +36,12 @@ public class Utily {
 
 
 
-    public static void EndPages(int sn){
-try {
-Thread.sleep(1000*sn);
-}catch (InterruptedException e) {
-    throw new RuntimeException(e);
+    public static void EndPages(){
+         Tools.wait(3);
+         driver.quit();
+
 }
-    }
+
     public static void AllEndPages() {
 
         try {
@@ -49,5 +49,6 @@ Thread.sleep(1000*sn);
         } catch (Exception ignored) {
 
         }
+
     }
 }
